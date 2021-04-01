@@ -7,10 +7,11 @@ const AboutInfo = ({ user, router }) => {
     if (!user) router.push("/login");
   });
   return (
-    <div>
+    <div style={{padding: '15px'}}>
       <Link href="/">
-        <a style={{ textDecoration: "underline" }}>Home</a>
+        <a style={{ textDecoration: "underline", color: 'blue' }}>Home</a>
       </Link>
+      <p style={{ fontSize: '20px'}}>This is the About Page of this Application</p> 
     </div>
   );
 };

@@ -8,18 +8,21 @@ export const Login = () => {
   return (
     <AuthContext.Consumer>
       {({ setUser }) => (
-        <div style={{padding: '20px'}} >
+        <div style={{margin: 'auto', width: 'auto', padding: '10px'}} >
+          <h1 style={{textAlign: 'center'}}>Welcome to Login Page</h1>
           <input
             type="text"
             onChange={(el) => {
               setUserName(el.target.value);
             }}
+            style={{ width: '30%', padding: '10px', margin: '10px'}}
           />
           <button
             onClick={() => {
               setUser(userName);
               router.push("/");
             }}
+            style={{ width: '10%', padding: '10px', fontSize: '15px'}}
           >
             Login
           </button>

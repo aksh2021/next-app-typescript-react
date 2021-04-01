@@ -12,20 +12,20 @@ const Welcome = ({ user, router }) => {
       .then((data) => setPosts(data));
   }, []);
   return (
-    <div>
-      <div> {`Welcome ${user}!`}</div>
+    <div style={{padding: '20px'}}>
+      <div style={{ textAlign: 'center', fontSize: '50px'}}> {`Welcome ${user}!`}</div>
       <div>
         <Link href="/about">
-          <a style={{ textDecoration: "underline" }}>About Us</a>
+          <a style={{ textDecoration: "underline", color: 'blue' }}>About Page</a>
         </Link>
       </div>
       <br />
       {posts.map((post, key) => {
         return (
           <div key={key}>
-            <div> {`Id: ${post.id}`}</div>
-            <div> {`Title: ${post.title}`}</div>
-            <div> {`Body: ${post.body}`}</div>
+            <div style={{ textAlign: 'center', fontSize: '30px'}}> {`ID: ${post.id}`}</div>
+            <div style={{ textAlign: 'center', fontSize: '25px'}}> {`Title: ${post.title}`}</div>
+            <div style={{ fontSize: '20px'}}> {`Body: ${post.body}`}</div>
           </div>
         );
       })}
